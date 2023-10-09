@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
+
+export const Nav = styled.nav`
+    
+`
 export const HeroContainer = styled.div`
     background: #0c0c0c;
     display: flex;
@@ -90,7 +94,7 @@ export const HeroP = styled.p`
 `
 
 export const HeroBtnWrapper = styled.div`
-    margin-top: 32px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;

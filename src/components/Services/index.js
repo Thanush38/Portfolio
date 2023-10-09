@@ -5,7 +5,7 @@ import Icon3 from '../../images/svg-3.svg'
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'
 const Services = () => {
   return (
-    <ServicesContainer id="services">
+    <ServicesContainer id="projects">
         <ServicesH1>Our Services</ServicesH1>
         <ServicesWrapper>
             <ServicesCard>

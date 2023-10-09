@@ -1,0 +1,22 @@
+/* ButtonLink.css */
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #01BF71; /* Change this to your desired button color */
+    color: #fff; /* Change this to your desired text color */
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+  
+  .button-link:hover {
+    background-color: #fff; /* Change this to your desired hover color */
+    color: #000000; /* Change this to your desired text color */
+
+  }
+  

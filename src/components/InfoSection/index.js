@@ -14,7 +14,7 @@ import {
     ImgWrap,
     Img
 } from './InfoSectionElements'
-const InfoSection = ({lightBg, id,imgStart, topLine,lightText,headline,darkText,description,img,alt, buttonLabel,primary,dark,dark2}) => {
+const InfoSection = ({lightBg, id,imgStart, topLine,lightText,headline,darkText,description,img,alt, buttonLabel, buttonId,primary,dark,dark2}) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -26,7 +26,7 @@ const InfoSection = ({lightBg, id,imgStart, topLine,lightText,headline,darkText,
                         <Heading lightText={lightText}>{headline}</Heading>
                         <Subtitle darkText={darkText ? 1:0}>{description}</Subtitle>
                         <BtnWrap>
-                            <Button to="home" smooth={true} duration={500} spy={true} exact="true" offset={-80} primary={primary ? 1:0}
+                            <Button to="/Contact" smooth={true} duration={500} spy={true} exact="true" offset={-80} primary={primary ? 1:0}
                             dark={dark? 1:0}
                             dark2={dark2 ? 1:0}
 
