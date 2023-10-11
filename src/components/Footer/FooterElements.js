@@ -12,7 +12,11 @@ export const FooterWrap = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 1100px;
+  height: 5px;
   margin: 0 auto;
+  @media screen and (max-width: 820px) {
+    height: 100%;
+  }
 `
 export const FooterLinksContainer = styled.div`
   display: flex;
@@ -97,7 +101,7 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 240px;
+  width: 100px;
 `
 export const SocialIconLink = styled.a`
   color: #fff;

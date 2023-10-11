@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')}; /* navbar will be black if scrollNav is true, otherwise it will be transparent */
+    background: ${({ scrollNav }) => (scrollNav ? '#6D90A6' : 'transparent')}; /* navbar will be black if scrollNav is true, otherwise it will be transparent */
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -83,7 +83,7 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer; /* nav links will be a pointer */
 
     &.active {
-        border-bottom: 3px solid #01bf71; /* nav link will have a red border on the bottom */
+        border-bottom: 3px solid #C0D7FB; /* nav link will have a red border on the bottom */
     }
 `
 
@@ -98,7 +98,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
     border-radius: 50px; /* nav btn will have a border radius of 50px */
-    background: #01bf71; /* nav btn will have a green background */
+    background: #8AC9EB; /* nav btn will have a green background */
     white-space: nowrap; /* nav btn will not wrap */
     padding: 10px 22px; /* nav btn will have 10px padding on the top and bottom and 22px padding on the left and right */
     color: #010606; /* nav btn will be black */

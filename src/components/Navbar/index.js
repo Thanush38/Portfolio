@@ -24,7 +24,7 @@ const Navbar = (props) => {
         <IconContext.Provider value={{color: '#fff'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to="/" onClick={toggleHome}>Thanush's Portfolio</NavLogo>
+                <NavLogo to="/" onClick={toggleHome}>Thanush Dinesh</NavLogo>
                 <MobileIcon onClick={props.toggle}>
                 <FaBars  />
                 </MobileIcon>
@@ -37,9 +37,6 @@ const Navbar = (props) => {
                     </NavItem>
                     <NavItem> 
                         <NavLinks to="projects" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Projects</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to="signup" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Sign Up</NavLinks>
                     </NavItem>
                 </NavMenu>    
                   <NavBtn>

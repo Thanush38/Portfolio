@@ -14,12 +14,13 @@ import {
     ImgWrap,
     Img
 } from '../InfoSectionElements'
+import Image from '../../../images/Vadi.png'
 import './About.css'
 import Pdf from '../../../Files/Resume.pdf'
 const About = () => {
   return (
     <>
-      <InfoContainer lightBg={false} id={'about'}>
+      <div style={{backgroundColor: '#0093E9', backgroundImage: 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)'}} id={'about'}>
         <InfoWrapper>   
             <InfoRow imgStart={false}>
                 <Column1>
@@ -28,19 +29,19 @@ const About = () => {
                         <Subtitle darkText={false}>I am a second year university student currently pursuing a Bachelors in computer Science. I started having an interest in coding during covid lockdown when I had a lot of free time. Throughout the years I have gained exceptional skill in coding with a variety of languages such as Python, C++ java, Javascript and more.  </Subtitle>
                         <BtnWrap>
                             
-                            <a href={Pdf} target="_blank" className="link">My Resume</a>
+                            <a href={Pdf} target="_blank" className="link" rel="noreferrer">My Resume</a>
                         </BtnWrap>
                     </TextWrapper>
                 </Column1>
                 <Column2>
                     <ImgWrap>
-                        <Img src={require('../../../images/svg-1.svg').default} alt={'Profile Picture'}/>
+                        <img src={Image} alt={'Profile Picture'} className='imgTag'/>
                     </ImgWrap>
                 </Column2>
 
                 </InfoRow>
         </InfoWrapper>
-        </InfoContainer>
+        </div>
     </>
   )
 }

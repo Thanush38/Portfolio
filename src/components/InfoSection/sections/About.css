@@ -2,7 +2,7 @@
 
 .link{
     border-radius: 50px;
-    background: #01BF71;
+    background: #8AC9EB;
     white-space: nowrap;
     padding:12px 30px;
     color: #010606;
@@ -20,3 +20,9 @@
     }
 }
 
+.imgTag{
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding-right: 0;
+
+}

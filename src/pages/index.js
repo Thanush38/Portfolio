@@ -7,7 +7,7 @@ import InfoSection from '../components/InfoSection'
 import Services from '../components/Services'
 import Footer from '../components/Footer'
 import About from '../components/InfoSection/sections/About'
-import { homeObjOne,homeObjTwo, homeObjThree } from '../components/InfoSection/Data'
+import Skills from '../components/InfoSection/sections/Skills'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -22,9 +22,8 @@ const Home = () => {
       <Navbar  toggle={toggle}/>
       <Hero />
       <About></About>
-      <InfoSection {...homeObjTwo}/>
+      <Skills></Skills>
       <Services></Services>
-      <InfoSection {...homeObjThree}/>
       <Footer></Footer>
       
     </>
