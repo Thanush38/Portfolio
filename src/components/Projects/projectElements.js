@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.div`
-    height: 800px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 120px;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     
@@ -49,7 +49,7 @@ export const ServicesCard = styled.div`
     justify-content: flex-start;
     align-items: center;
     max-width: 300px;
-    max-height: 400px;
+    max-height: 300px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba (0,0,0,0.9);

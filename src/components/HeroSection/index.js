@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Video from "../../Video/Mountain.mp4";
 import {
-  Nav,
   HeroContainer,
   HeroBg,
   VideoBg,
@@ -10,12 +9,9 @@ import {
   HeroH1,
   HeroP,
   HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
   HeroBtnContainer,
 } from "./HeroElements";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Button } from "../ButtonElement";
 import "./index.css";
 import { TypeAnimation } from "react-type-animation";
 
@@ -26,12 +22,12 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setDelayed(true);
-    }, 3500);
+    }, 2000);
   }, []);
   useEffect(() => {
     setTimeout(() => {
       setShowButton(true);
-    }, 6000);
+    }, 5000);
   },[]);
   const onHover = () => {
     setHover(!hover);
@@ -57,14 +53,14 @@ const Hero = () => {
           <TypeAnimation
             cursor={false}
             sequence={["Welcome to my portfolio"]}
-            speed={250}
+            speed={175}
           />
         </HeroH1>
         
         {delayed? <HeroP><TypeAnimation
             cursor={true}
             sequence={["My name is Thananjaya Sharma Dinesh, but I go by Thanush"]}
-            speed={175}
+            speed={150}
           /></HeroP>: <HeroP></HeroP>}
         
       </HeroContent>

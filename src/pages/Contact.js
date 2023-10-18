@@ -4,8 +4,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./Contact.css";
-// import NavBar from '../components/NavBar';
-import img from "../images/Contact.jpg";
+
 
 const Contact = () => {
   const {
@@ -28,7 +27,7 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     try {
-      const { name, email, subject, message } = data;
+      
 
       
       await emailjs.send(
@@ -48,7 +47,7 @@ const Contact = () => {
       <div className="Nav">
         <div className="navContainer">
           <div className="return">
-            <a href="/">
+            <a href="/" className="link">
               <p>Return to Home</p>
             </a>
           </div>

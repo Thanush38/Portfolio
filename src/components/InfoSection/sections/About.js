@@ -20,7 +20,7 @@ import Pdf from '../../../Files/Resume.pdf'
 const About = () => {
   return (
     <>
-      <div style={{backgroundColor: '#0093E9', backgroundImage: 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)'}} id={'about'}>
+      <div style={{backgroundColor: '#add8e6'}} id={'about'}>
         <InfoWrapper>   
             <InfoRow imgStart={false}>
                 <Column1>

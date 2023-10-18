@@ -10,7 +10,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 800px;
+    height: 100vh;
     position: relative;
     z-index: 1;
 
@@ -44,7 +44,7 @@ export const HeroBg = styled.div`
 
 export const VideoBg = styled.video`
     width: 100%;
-    height: 100%;
+    height: 120%;
     -o-object-fit: cover; // for Opera
     object-fit: cover;
     background: #232a34;

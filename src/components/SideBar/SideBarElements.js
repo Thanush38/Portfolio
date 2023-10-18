@@ -7,7 +7,7 @@ export const SidebarContainer = styled.aside`
     z-index: 999; /* sidebar will be on top of everything else */
     width: 100%; /* sidebar will be 350px */
     height: 100%; /* sidebar will be 100% of the page */
-    background: #0d0d0d; /* sidebar will be yellow */
+    background: #5A84A4; /* sidebar will be yellow */
     display: grid; /* sidebar will be a grid */
     align-items: center; /* sidebar will be centered vertically */
     top: 0; /* sidebar will be at the top of the page */
@@ -71,7 +71,7 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarRoute = styled(LinkR)`
     border-radius: 50px; /* sidebar button will have a border radius of 50px */
-    background: #01bf71; /* sidebar button will have a green background */
+    background: #8AC9EB; /* sidebar button will have a green background */
     white-space: nowrap; /* sidebar button will not wrap */
     padding: 16px 64px; /* sidebar button will have 16px padding on the top and bottom and 64px padding on the left and right */
     color: #010606; /* sidebar button will be black */
