@@ -1,5 +1,6 @@
 import React from 'react'
 import pokeball from '../../images/pokeball.png'
+import Quiz from '../../images/quiz.png'
 import pyQt6 from '../../images/pythonQt6.png'
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP,SocialIcons, SocialIconLink } from './projectElements'
 import {AiFillGithub} from 'react-icons/ai'
@@ -45,14 +46,14 @@ const Services = () => {
             </Tilt><Tilt tiltMaxAngleX={10}  
         tiltMaxAngleY={10} perspective={1000} >
             <ServicesCard>
-                <ServicesIcon src={pokeball}/>
-                <ServicesH2>Pokedex</ServicesH2>
-                <ServicesP>Uses Reactjs and Pokeapi to get information on any pokemon. </ServicesP>
+                <ServicesIcon src={Quiz}/>
+                <ServicesH2>Quiz Game</ServicesH2>
+                <ServicesP style={{fontSize:"0.75rem"}}>A Quiz game with HTML, CSS and javascript. Uses api to fetch questions from online and stores High Scores.</ServicesP>
                 <SocialIcons>
-                <SocialIconLink href="https://brilliant-clafoutis-295f30.netlify.app" target='_blank' arial-label="Website">
+                <SocialIconLink href="https://thanush-quiz.netlify.app/" target='_blank' arial-label="Website">
                 <BsLink45Deg />
               </SocialIconLink>
-              <SocialIconLink href="https://github.com/Thanush38/pokedex" target='_blank' arial-label="Github">
+              <SocialIconLink href="https://github.com/Thanush38/javascript-quiz-app" target='_blank' arial-label="Github">
                 <AiFillGithub />
               </SocialIconLink>
               </SocialIcons>

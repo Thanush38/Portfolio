@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import Video from "../../Video/Mountain.mp4";
 import {
   HeroContainer,
@@ -43,10 +43,14 @@ const Hero = () => {
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
+ 
+
+  
   return (
-    <HeroContainer id="home">
+    <HeroContainer id="Home" >
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        
       </HeroBg>
       <HeroContent>
         <HeroH1>

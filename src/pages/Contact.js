@@ -47,7 +47,7 @@ const Contact = () => {
       <div className="Nav">
         <div className="navContainer">
           <div className="return">
-            <a href="/" className="link">
+            <a href="/" className="link" style={{height: '30px', textDecoration: 'none'}}>
               <p>Return to Home</p>
             </a>
           </div>

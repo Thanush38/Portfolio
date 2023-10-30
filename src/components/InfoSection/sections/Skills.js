@@ -24,8 +24,15 @@ const Skills = () => {
                 <Column1>
                     <TextWrapper>
                         <Heading lightText={false}>My Skills</Heading>
-                        <Subtitle darkText={true ? 1:0}>Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. Some of my most strongest languages and frameworks can be seen to the left. You can also view some of my work at my <a href="https://www.github.com/thanush38" target="_blank">github</a>. </Subtitle>
+                        <Subtitle darkText={true ? 1:0}>Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. Some of my most strongest languages and frameworks can be seen to the left. You can also view some of my work at my github or LinkedIn. </Subtitle>
+                        
+                        <BtnWrap >
+                            <a href="https://www.github.com/thanush38" target="_blank" className="gitLink" rel="noreferrer">Github</a>
+                            <a href="https://www.linkedin.com/in/thanush-dinesh/" target="_blank" className="gitLink" rel="noreferrer">LinkedIn</a>
+                        </BtnWrap>
+                        
                     </TextWrapper>
+                    
                 </Column1>
                 <Column2>
                     <ImgWrap>
