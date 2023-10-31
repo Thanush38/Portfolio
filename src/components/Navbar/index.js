@@ -21,11 +21,11 @@ const Navbar = (props) => {
     }
   return (
     <>
-        <IconContext.Provider value={{color: '#fff'}}>
+        <IconContext.Provider value={{color: '#000'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogo to="/" onClick={toggleHome}>Thanush Dinesh</NavLogo>
-                <MobileIcon onClick={props.toggle}>
+                <MobileIcon onClick={props.toggle} >
                 <FaBars  />
                 </MobileIcon>
                 <NavMenu>

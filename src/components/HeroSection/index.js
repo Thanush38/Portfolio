@@ -14,6 +14,8 @@ import {
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./index.css";
 import { TypeAnimation } from "react-type-animation";
+import BIRDS from 'vanta/src/vanta.net'
+import * as THREE from 'three'
 
 const Hero = () => {
   const [hover, setHover] = useState(false);
@@ -43,15 +45,43 @@ const Hero = () => {
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
+  
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        BIRDS({
+          el: vantaRef.current,
+          THREE: THREE,
+          mouseControls: true,
+          gyroControls: false,
+          touchControls: true,
+          minWidth: 200.00,
+          minHeight: 200.00,
+          scaleMobile: 1.00,
+          scale: 1.00,
+          backgroundColor: 0xffffff,
+          color: 0x20a3ff,
+          points: 20.00,
+        })
+       
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+
  
 
   
   return (
     <HeroContainer id="Home" >
-      <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
-        
-      </HeroBg>
+      <div className="overlay">
+        <div ref={vantaRef} id="background" style={{height: '100vh'}} />
+      </div>
       <HeroContent>
         <HeroH1>
           <TypeAnimation
