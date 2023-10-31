@@ -1,5 +1,11 @@
 
+.background{
+    background: #add8e6;
 
+    @media screen and (max-width: 768px){
+        height: 130vh;
+    }
+}
 .link{
     border-radius: 50px;
     background: #8AC9EB;
@@ -47,5 +53,13 @@
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+
+    @media screen and (max-width: 768px){
+        height: 75%;
+        width: 75%;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 20px;
+    }
 
 }
