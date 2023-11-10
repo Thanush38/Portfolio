@@ -19,7 +19,7 @@ const Services = () => {
                 <ServicesH2>Pokedex</ServicesH2>
                 <ServicesP>Uses Reactjs and Pokeapi to get information on any pokemon. </ServicesP>
                 <SocialIcons>
-                <SocialIconLink href="https://brilliant-clafoutis-295f30.netlify.app" target='_blank' arial-label="Website">
+                <SocialIconLink href="https://thanush-pokedex.netlify.app" target='_blank' arial-label="Website">
                 <BsLink45Deg />
               </SocialIconLink>
               <SocialIconLink href="https://github.com/Thanush38/pokedex" target='_blank' arial-label="Github">
@@ -33,9 +33,9 @@ const Services = () => {
             <ServicesCard>
                 <ServicesIcon src={pyQt6}/>
                 <ServicesH2>PyQt6 Multi GUI application</ServicesH2>
-                <ServicesP style={{fontSize:"0.75rem"}}>Uses python and PyQt6 libray to implement an Multiple use app that can perform functions such as youtube to mp4 downloader and a url shortener</ServicesP>
+                <ServicesP style={{fontSize:"0.75rem"}}>Uses Python and PyQt6 libray to implement a multiple use app that can perform functions such as youtube to mp4 downloader and a url shortener.</ServicesP>
                 <SocialIcons>
-                <SocialIconLink href="https://brilliant-clafoutis-295f30.netlify.app" target='_blank' arial-label="Website">
+                <SocialIconLink href="https://drive.google.com/file/d/1iHeW5zUUnXNw64RBAYa7Md2X14gpi-Nx/view?usp=sharing" target='_blank' arial-label="Website">
                 <BsLink45Deg />
               </SocialIconLink>
               <SocialIconLink href="https://github.com/Thanush38/multiGuiApp" target='_blank' arial-label="Github">
@@ -48,7 +48,7 @@ const Services = () => {
             <ServicesCard>
                 <ServicesIcon src={Quiz}/>
                 <ServicesH2>Quiz Game</ServicesH2>
-                <ServicesP style={{fontSize:"0.75rem"}}>A Quiz game with HTML, CSS and javascript. Uses api to fetch questions from online and stores High Scores.</ServicesP>
+                <ServicesP style={{fontSize:"0.75rem"}}>A Quiz game with HTML, CSS and JavaScript. Uses api to fetch questions from online and stores high scores.</ServicesP>
                 <SocialIcons>
                 <SocialIconLink href="https://thanush-quiz.netlify.app/" target='_blank' arial-label="Website">
                 <BsLink45Deg />

@@ -100,9 +100,17 @@ export const SocialIcons = styled.div`
   align-items: center;
   width: 100px;
   color: black;
+  transition: 0.3s ease-out;
+
+  
 `
 export const SocialIconLink = styled.a`
   color: black;
   font-size: 24px;
   size: 50px;
+  transition: 0.3s ease-out;
+
+    &:hover {
+    transform: scale(1.3);
+  }
 `

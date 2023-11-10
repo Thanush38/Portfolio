@@ -25,6 +25,7 @@ const Navbar = (props) => {
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogo to="/" onClick={toggleHome}>Thanush Dinesh</NavLogo>
+
                 <MobileIcon onClick={props.toggle} >
                 <FaBars  />
                 </MobileIcon>
