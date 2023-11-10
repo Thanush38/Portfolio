@@ -1,73 +1,54 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! This website was built using React.js and incorporates several libraries to enhance the user experience. Below, you'll find information about the technologies used, features, and how to set up the project on your local machine.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- **React.js**: The website is built using the React.js library, allowing for a dynamic and responsive user interface.
 
-### `npm start`
+- **Vanta.js**: Vanta.js is used for the captivating background effects that add a visually appealing touch to the website.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React-Scroll**: This library is employed for smooth scrolling navigation, providing a seamless transition between different sections of the portfolio.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React-Parallax-Tilt**: The React-Parallax-Tilt library is used to create a parallax effect on certain elements, enhancing the overall visual experience.
 
-### `npm test`
+- **Email.js**: For the contact section, Email.js is integrated to facilitate the sending of emails directly from the website.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Add more libraries and technologies as needed -->
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design**: The website is designed to be fully responsive, ensuring a great user experience across various devices and screen sizes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Interactive Background**: Vanta.js is utilized to create an interactive and visually appealing background that captures the user's attention.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Smooth Scrolling**: React-Scroll ensures smooth scrolling between different sections, enhancing navigation.
 
-### `npm run eject`
+- **Parallax Effect**: React-Parallax-Tilt is applied to certain elements to create a subtle parallax effect, adding depth to the design.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Contact Form**: The contact section includes a form powered by Email.js, making it easy for users to get in touch.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Add more features as needed -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run this project locally, follow these steps:
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Thanush38/Portfolio.git
+   ```
+2. Navigate to the repository:
+    ```bash
+    cd Portfolio.git
+    ```
+3.  install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+5. Open your browser and visit http://localhost:3000 to view the website.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-Fix button on About page
