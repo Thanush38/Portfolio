@@ -14,7 +14,7 @@ import {
     ImgWrap,
     Img
 } from '../InfoSectionElements'
-import Image from '../../../images/portfolio.png'
+import Image from '../../../images/personal.png'
 import './About.css'
 import Pdf from '../../../Files/Resume.pdf'
 const About = () => {

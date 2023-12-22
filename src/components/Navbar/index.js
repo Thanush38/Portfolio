@@ -4,6 +4,8 @@ import {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa' 
 import {IconContext} from 'react-icons/lib'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
+import logo from '../../images/black.png'
+import './Navbar.css'
 const Navbar = (props) => {
     const [scrollNav, setScrollNav] = useState(false)
     const changeNav = () => {
@@ -24,7 +26,8 @@ const Navbar = (props) => {
         <IconContext.Provider value={{color: '#000'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to="/" onClick={toggleHome}>Thanush Dinesh</NavLogo>
+                {/* <NavLogo to="/" onClick={toggleHome}><img src={logo} to="/" onClick={toggleHome}></img></NavLogo> */}
+                <img src={logo} to="/" onClick={toggleHome} className="logo"></img>
 
                 <MobileIcon onClick={props.toggle} >
                 <FaBars  />

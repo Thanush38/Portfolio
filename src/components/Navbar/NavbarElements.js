@@ -39,6 +39,7 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+    ${'' /* background-image: (url('../../images/logo.png')); */}
     
 `
 
