@@ -11,6 +11,17 @@ export const InfoContainer = styled.div`
     }
 `;
 
+export const InfoContainer2 = styled.div`
+    color: #fff;
+    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+    display: none;
+    
+
+    @media screen and (max-width: 1300px){
+        display: flex;
+    }
+`
+
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
