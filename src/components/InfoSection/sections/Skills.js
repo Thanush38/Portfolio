@@ -10,7 +10,7 @@ const Skills = () => {
   	function getCurrentDimension(){
     	return {
       		width: window.innerWidth,
-      		height: window.innerHeight
+      		height: window.innerHeight,
     	}
   	}
   
@@ -77,7 +77,7 @@ const Skills = () => {
             return (
                 <div className="box-container">
                     <h1>Skills</h1>
-                   <p className="para"> Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. Some of my most strongest languages and frameworks can be seen to the left. You can also view some of my work at my github or LinkedIn. </p>
+                   <p className="para"> Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. You can also view some of my work at my github or LinkedIn. </p>
                    <div className="skills">
                    <BtnWrap >
 
@@ -90,7 +90,7 @@ const Skills = () => {
         } else if(i===4){
             return (
                 <div className="box-container">
-                    <h1>Frameworks</h1>
+                    <h1 className="small-font">Frameworks</h1>
                     <div className="web">
                     <img className="img" src="https://img.icons8.com/color/96/react-native.png" alt="react"/>
                     <img className="img" src="https://img.icons8.com/doodle/48/svetle.png" alt="svetle"/>
@@ -160,7 +160,7 @@ const Skills = () => {
 
   return (
     <>
-    {screenSize.width < 1300 ? <AltSkills /> : (
+    {screenSize.width <1300 ? <AltSkills /> : (
     <div className="container" id="skills">
     <div className="grid auto-rows-[30vh] grid-cols-4 gap-4 box-c">
   {[...Array(8)].map((_, i) => (

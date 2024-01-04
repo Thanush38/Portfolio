@@ -2,15 +2,16 @@ import React from 'react'
 import pokeball from '../../images/pokeball.png'
 import Quiz from '../../images/quiz.png'
 import pyQt6 from '../../images/pythonQt6.png'
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP,SocialIcons, SocialIconLink } from './projectElements'
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP,SocialIcons, SocialIconLink, TitleContainer } from './projectElements'
 import {AiFillGithub} from 'react-icons/ai'
 import {BsLink45Deg} from 'react-icons/bs'
 import Tilt from 'react-parallax-tilt';
 const Services = () => {
   return (
     <ServicesContainer id="projects">
+      <TitleContainer>
         <ServicesH1>My Projects</ServicesH1>
-        
+      </TitleContainer>
         <ServicesWrapper>
             <Tilt  tiltMaxAngleX={10}  
         tiltMaxAngleY={10} perspective={1000} >

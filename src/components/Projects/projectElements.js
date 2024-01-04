@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.div`
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     
@@ -114,3 +113,12 @@ export const SocialIconLink = styled.a`
     transform: scale(1.3);
   }
 `
+
+export const TitleContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+    margin-top: 64px;
+`;
