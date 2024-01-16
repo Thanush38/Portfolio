@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.div`
-    height: 100vh;
+    height: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,11 +9,11 @@ export const ServicesContainer = styled.div`
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     
     @media screen and (max-width: 1000px) {
-        height: 1000px;
+        height: 1500px;
     }
 
     @media screen and (max-width: 768px) {
-        height: 200vh;
+        height: 2750px;
         background-color: #0093E9;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
@@ -48,7 +48,7 @@ export const ServicesCard = styled.div`
     justify-content: flex-start;
     align-items: center;
     max-width: 300px;
-    max-height: 300px;
+    height: 325px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba (0,0,0,0.9);

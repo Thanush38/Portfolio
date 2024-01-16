@@ -1,7 +1,6 @@
 import React from 'react'
 import './Skills.css'
 import goImg from '../../../images/go.png'
-import { BtnWrap } from '../../InfoSection/InfoSectionElements'
 import AltSkills from './AltSkills'
 import {useState, useEffect} from 'react'
 const Skills = () => {
@@ -79,11 +78,11 @@ const Skills = () => {
                     <h1>Skills</h1>
                    <p className="para"> Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. You can also view some of my work at my github or LinkedIn. </p>
                    <div className="skills">
-                   <BtnWrap >
+                   <div className="btnWrap" >
 
                         <a href="https://www.github.com/thanush38" target="_blank" className="gitLink" rel="noreferrer">Github</a>
                         <a href="https://www.linkedin.com/in/thanush-dinesh/" target="_blank" className="gitLink" rel="noreferrer">LinkedIn</a>
-                    </BtnWrap>
+                    </div>
                     </div>
                 </div>
             )
@@ -93,11 +92,9 @@ const Skills = () => {
                     <h1 className="small-font">Frameworks</h1>
                     <div className="web">
                     <img className="img" src="https://img.icons8.com/color/96/react-native.png" alt="react"/>
-                    <img className="img" src="https://img.icons8.com/doodle/48/svetle.png" alt="svetle"/>
+                    <img className="img" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-angular-a-typescript-based-open-source-web-application-framework-logo-shadow-tal-revivo.png" alt="Angular"/>
                     <img className="img" src="https://img.icons8.com/color/96/net-framework.png" alt="net-framework"/>
                     <img className="img" src="https://img.icons8.com/ios-filled/100/43CD54/qt.png" alt="qt"/>
-
-                    
                     </div>
                 </div>
             )
@@ -160,13 +157,13 @@ const Skills = () => {
 
   return (
     <>
-    {screenSize.width <1300 ? <AltSkills /> : (
+    {screenSize.width <950 ? <AltSkills /> : (
     <div className="container" id="skills">
-    <div className="grid auto-rows-[30vh] grid-cols-4 gap-4 box-c">
+    <div className="grid auto-rows-[28vh] grid-cols-4 gap-4 box-c">
   {[...Array(8)].map((_, i) => (
     <div
       key={i}
-      className={`row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900 ${
+      className={`row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 ${
        getLength(i)
       }`}
     >{getInfo(i)}</div>
@@ -183,9 +180,3 @@ const Skills = () => {
 export default Skills
 
 
-
-
-{/* <BtnWrap >
-                            <a href="https://www.github.com/thanush38" target="_blank" className="gitLink" rel="noreferrer">Github</a>
-                            <a href="https://www.linkedin.com/in/thanush-dinesh/" target="_blank" className="gitLink" rel="noreferrer">LinkedIn</a>
-                        </BtnWrap> */}

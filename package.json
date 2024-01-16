@@ -1,11 +1,9 @@
 {
   "name": "portfolio",
-  "homepage": "http://Thanush38.github.io/Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@sentry/react": "^7.91.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,9 +14,9 @@
     "react-icons": "^4.11.0",
     "react-parallax-tilt": "^1.7.170",
     "react-router-dom": "^6.16.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
-    "react-toastify": "^9.1.3",
+    "react-toastify": "^9.0.3",
     "react-type-animation": "^3.2.0",
     "react-vanilla-tilt": "^1.0.0",
     "styled-components": "^6.0.8",
@@ -28,11 +26,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn sentry:sourcemaps",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -48,6 +44,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.0",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.1"
   }
 }
