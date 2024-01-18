@@ -29,7 +29,7 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowButton(true);
-    }, 5000);
+    }, 4500);
   },[]);
   const onHover = () => {
     setHover(!hover);
@@ -93,7 +93,7 @@ const Hero = () => {
         
         {delayed? <HeroP><TypeAnimation
             cursor={true}
-            sequence={["My name is Thananjaya Sharma Dinesh, but I go by Thanush"]}
+            sequence={["My name is Thananjaya Sharma Dinesh"]}
             speed={150}
           /></HeroP>: <HeroP></HeroP>}
         

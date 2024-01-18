@@ -76,7 +76,7 @@ const Skills = () => {
             return (
                 <div className="box-container">
                     <h1>Skills</h1>
-                   <p className="para"> Throughout the years I have learned many languages such as Javascript,Python,C++ and more as well as learning some frameworks and multiple libraries in each language. You can also view some of my work at my github or LinkedIn. </p>
+                   <p className="para"> Throughout the years I have learned many languages, frameworks and multiple libraries. You can also view some of my work at my github or LinkedIn. </p>
                    <div className="skills">
                    <div className="btnWrap" >
 
@@ -127,10 +127,10 @@ const Skills = () => {
                 <div className="box-container">
                     <h1>Developer Tools</h1>
                     <div className="dev">
-                    <img className="img" src="https://img.icons8.com/color/96/npm.png" alt="npm"/>
                     <img className="img" src="https://img.icons8.com/color/96/git.png" alt="git"/>
+                    <img className="img" src="https://img.icons8.com/color/96/npm.png" alt="npm"/>
                     <img className="img" src="https://img.icons8.com/fluency/96/docker.png" alt="docker"/>
-                    <img className="img" src="https://img.icons8.com/color/96/firebase.png" alt="firebase"/>
+                    <img className="img" src="https://img.icons8.com/fluency/96/azure-1.png" alt="azure-1"/>
                     <img className="img" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-amazon-web-services-a-subsidiary-of-amazon-that-provides-on-demand-cloud-computing-logo-color-tal-revivo.png" alt="external-amazon-web-services-a-subsidiary-of-amazon-that-provides-on-demand-cloud-computing-logo-color-tal-revivo"/>
                     <img className="img" src="https://img.icons8.com/color/96/linux--v1.png" alt="linux--v1"/>
                     <img className="img" src="https://img.icons8.com/ios-filled/100/console.png" alt="console"/>

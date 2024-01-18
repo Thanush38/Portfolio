@@ -17,7 +17,6 @@ const Footer = () => {
             <SocialLogo to='/' onClick={toggleHome}>
               Thanush Dinesh
             </SocialLogo>
-            <WebsiteRights>Thanush © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>
               <SocialIconLink href="https://github.com/Thanush38" target='_blank' arial-label="Github">
                 <FaGithub />

@@ -54,9 +54,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="ContactForm">
-        <div className="container"></div>
         <div className="row">
+      <div className="ContactForm">
           <div className="col-12 text-center">
             <div className="contactForm">
               <form
@@ -71,7 +70,7 @@ const Contact = () => {
                     <input
                       type="text"
                       name="name"
-                      className="formInput1"
+                      className="label"
                       placeholder="Name"
                       {...register("name", {
                         required: {
@@ -89,7 +88,7 @@ const Contact = () => {
                     <input
                       type="email"
                       name="email"
-                      className="formInput1"
+                      className="label"
                       placeholder="Email address"
                       {...register("email", {
                         required: true,
@@ -109,7 +108,7 @@ const Contact = () => {
                     <input
                       type="text"
                       name="subject"
-                      className="form-control formInput subject"
+                      className="label"
                       placeholder="Subject"
                       {...register("subject", {
                         required: {
@@ -132,9 +131,10 @@ const Contact = () => {
                 <div className="row formRow">
                   <div className="col">
                     <textarea
-                      rows={3}
+                      rows={4}
+                      cols={50}
                       name="message"
-                      className="form-control formInput"
+                      className="label message"
                       placeholder="Message"
                       defaultValue={""}
                       {...register("message", {

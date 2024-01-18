@@ -1,7 +1,5 @@
 .Wrapper{
-    /* background: red; */
-    background-image: url('../images/Contact3.jpeg');
-    height: 100vh;
+    background-color: #add8e6;
     background-size: cover;
 }
 
@@ -11,12 +9,12 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 50%;
-    height: 50vh;
+    height: 50%;
     padding: 20px;
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: #fff;
 }
 .nav{
     display: flex;
@@ -74,9 +72,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 20px;
     align-items: center;
     margin: 0 auto;
+    @media screen and (max-width: 520px) {
+        flex-direction: column;
+    }
 }
 
 .formRow{
@@ -85,9 +85,15 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    
 }
 .gap{
     margin: 10px;
+
+    @media screen and (max-width: 520px) {
+        margin: 0px;
+        
+    }
 }
 
 
@@ -108,8 +114,8 @@
     width: 75%;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 20px;
+    border: 1px solid #000;
 
 }
 
@@ -117,8 +123,8 @@
     width: 100%;
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 20px;
+    border: 1px solid #000;
 }
 
 .submit-btn{
@@ -134,14 +140,14 @@
 }
 
 .pTag{
-    color: #fff;
+    color: #000;
     font-weight: bold;
     font-size: 20px;
     margin: 10px;
 }
 
 .email{
-    color: #fff;
+    color: #000;
     font-weight: bold;
     font-size: 20px;
     margin: 10px;
@@ -167,4 +173,31 @@
 .btn:hover{
     color: #217DF3;
     transition: 0.5s;
+}
+
+.label {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out; 
+  
+    cursor: pointer;
+  }
+  
+  .label:hover {
+    background-color: #f0f0f0; 
+  }
+
+.message{
+   
+    @media screen and (max-width: 520px) {
+       width: 60%;
+        
+    }
 }

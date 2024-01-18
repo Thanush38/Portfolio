@@ -26,7 +26,6 @@ const Navbar = (props) => {
         <IconContext.Provider value={{color: '#000'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                {/* <NavLogo to="/" onClick={toggleHome}><img src={logo} to="/" onClick={toggleHome}></img></NavLogo> */}
                 <img src={logo} to="/" onClick={toggleHome} className="logo"></img>
 
                 <MobileIcon onClick={props.toggle} >
