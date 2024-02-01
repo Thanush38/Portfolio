@@ -3,7 +3,6 @@ import pokeball from '../../images/pokeball.png'
 import Quiz from '../../images/quiz.png'
 import pyQt6 from '../../images/pythonQt6.png'
 import face from '../../images/face.png'
-import analyses from '../../images/data.png'
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP,SocialIcons, SocialIconLink, TitleContainer } from './projectElements'
 import {AiFillGithub} from 'react-icons/ai'
 import {BsLink45Deg} from 'react-icons/bs'
@@ -39,7 +38,7 @@ const Services = () => {
                 <ServicesH2>Quiz Game</ServicesH2>
                 <ServicesP style={{fontSize:"0.75rem"}}>A Quiz game built with NodeJs, ExpressJs and MongoDB. Uses RestAPI to fetch questions from online and uses MongoDB to store high scores.</ServicesP>
                 <SocialIcons>
-                <SocialIconLink href="https://thanush-quiz.netlify.app/" target='_blank' arial-label="Website">
+                <SocialIconLink href="https://node-quiz-48f2858a076b.herokuapp.com" target='_blank' arial-label="Website">
                 <BsLink45Deg />
               </SocialIconLink>
               <SocialIconLink href="https://github.com/Thanush38/node-quiz" target='_blank' arial-label="Github">
@@ -68,7 +67,7 @@ const Services = () => {
             <Tilt tiltMaxAngleX={10}  
         tiltMaxAngleY={10} perspective={1000} >
             <ServicesCard>
-                <ServicesIcon src={analyses}/>
+                <ServicesIcon src={"https://img.icons8.com/external-flaticons-lineal-color-flat-icons/256/1FB141/external-data-analysis-media-agency-flaticons-lineal-color-flat-icons.png"}/>
                 <ServicesH2>Sugar-Sweetened Beverage Consumption Analysis</ServicesH2>
                 <ServicesP style={{fontSize:"0.75rem"}}>An analysis of sugar-sweetened beverage consumption utilizing Python with the Pandas and Matplotlib's library for enhanced professional insights.</ServicesP>
                 

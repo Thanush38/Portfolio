@@ -1,6 +1,7 @@
 .Wrapper{
     background-color: #add8e6;
-    background-size: cover;
+    height: 100vh;
+    overflow: auto;
 }
 
 .ContactForm{
