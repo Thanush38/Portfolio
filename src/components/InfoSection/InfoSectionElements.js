@@ -51,6 +51,9 @@ export const Column1 = styled.div`
     margin-right: 50px;
     padding: 0 15px;
     grid-area: col1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 `;
 
@@ -101,12 +104,14 @@ export const Subtitle  = styled.p`
 
 export const BtnWrap = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     
 
 `;
 
 export const ImgWrap = styled.div`
+    display: flex;
+    justify-content: center;
     max-width: 555px;
     height: 100%;
 
