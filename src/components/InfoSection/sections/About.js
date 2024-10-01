@@ -16,7 +16,7 @@ import {
 } from '../InfoSectionElements'
 import Image from '../../../images/new.png'
 import './About.css'
-import Pdf from '../../../Files/ThananjayanResume.pdf'
+import Pdf from '../../../Files/ThananjayaResume.pdf'
 const About = () => {
   return (
     <>
@@ -26,7 +26,7 @@ const About = () => {
                 <Column1>
                     <TextWrapper>
                         <Heading lightText={false}>About Me:</Heading>
-                        <Subtitle darkText={true}>I am a second year university student currently pursuing a Bachelors in Computer Science. Amidst the challenges of the COVID era with determined efforts, I navigated multiple programming languages and frameworks, embodying adaptability and resilience in my educational journey.  </Subtitle>
+                        <Subtitle darkText={true}>I am a third year university student currently pursuing a Bachelors in Computer Science. Amidst the challenges of the COVID era with determined efforts, I navigated multiple programming languages and frameworks, embodying adaptability and resilience in my educational journey.  </Subtitle>
                         <BtnWrap>
                             
                             <a href={Pdf} target="_blank" className="link" rel="noreferrer">My Resume</a>

@@ -46,7 +46,7 @@ h1{
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,6 +180,14 @@ h1{
 
 }
 
+.center-box-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .dev {
     display: flex;
     flex-direction: column;

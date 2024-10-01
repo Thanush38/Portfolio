@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.div`
-    height: 1100px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,12 +94,16 @@ export const ServicesP = styled.p`
 `;
 
 export const SocialIcons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100px;
-  color: black;
-  transition: 0.3s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    gap: 10px;
+    color: black;
+    transition: 0.3s ease-out;
 
   
 `

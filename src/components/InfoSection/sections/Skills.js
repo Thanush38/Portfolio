@@ -74,7 +74,7 @@ const Skills = () => {
             )
         } else if(i===3){
             return (
-                <div className="box-container">
+                <div className="center-box-container">
                     <h1>Skills</h1>
                    <p className="para"> Throughout the years I have learned many languages, frameworks and multiple libraries. You can also view some of my work at my github or LinkedIn. </p>
                    <div className="skills">

@@ -26,12 +26,54 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /*transition: transform 0.5s ease-in-out;*/
     /*grid-template-columns: repeat(3, 1fr);*/
     align-items: center;
     justify-content: center;
     grid-gap: 16px;
     padding: 0 50px;
 }
+
+.animateCardMove {
+    transition: transform 1s ease-in-out;
+}
+.slide-in {
+    transform: translateX(0);
+    transition: none;
+}
+
+.slide-out {
+    transform: translateX(-400px);
+}
+
+.animateCardFade {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: scale(0.9); /* Example for scaling effect */
+    opacity: 0; /* Initially hidden */
+}
+
+.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Reset any scale transform */
+}
+
+.fade-out {
+    opacity: 0; /* Fully hidden */
+    transform: scale(0.9); /* Example for shrinking effect on fade-out */
+}
+
+
+.hideCard{
+    display: none;
+
+}
+.disabled{
+    pointer-events: none;
+}
+
+
+
+
 
 @media screen and (max-width: 1000px) {
     .ServicesWrapper {
@@ -100,9 +142,24 @@
     justify-content: space-between;
     align-items: center;
     width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    gap: 10px;
     color: black;
     transition: 0.3s ease-out;
 }
+
+/*.SocialIcons {*/
+/*    position: absolute;*/
+/*    bottom: 10px;*/
+/*    right: 10px;*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*}*/
+
+
+
 
 .SocialIconLink {
     color: black;
@@ -126,6 +183,16 @@
 .ProjectSlider{
     display: flex;
     margin-bottom: 64px;
+}
+
+
+.arrow-top-left {
+    transform: rotate(-45deg); /* Changed from 45deg to -45deg */
+    transform-origin: bottom left; /* Adjusted the transform-origin to mirror the arrow */
+}
+.arrow-bottom-left {
+    transform: rotate(45deg); /* Changed from -45deg to 45deg */
+    transform-origin: top left; /* Adjusted the transform-origin */
 }
 /* From Uiverse.io by Nawsome */
 .arrow {
@@ -157,7 +224,7 @@
     transition: all 0.15s;
 }
 
-.arrow-top {
+.arrow-top-right {
     transform: rotate(45deg);
     transform-origin: bottom right;
 }
@@ -168,7 +235,7 @@
     transition-delay: 0s;
 }
 
-.arrow-bottom {
+.arrow-bottom-right {
     transform: rotate(-45deg);
     transform-origin: top right;
 }
