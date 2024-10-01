@@ -5,6 +5,8 @@ import pyQt6 from '../../images/pythonQt6.png'
 import face from '../../images/face.png'
 import ECommerce from '../../images/ECommerce.png'
 import DiscordBot from '../../images/DiscordBot.png'
+import watches from '../../images/watches.png'
+import resume from '../../images/resume.png'
 import {
     ServicesContainer,
     ServicesH1,
@@ -39,6 +41,20 @@ const data = {
             "link": "",
             "github": "https://github.com/Thanush38/CodeBot",
             "image": DiscordBot
+        },
+        {
+            "name": "Luxury Watch Recommendation System",
+            "description": "A Python-based machine learning recommendation system that suggests luxury watches based on user preferences.",
+            "link": "",
+            "github": "https://github.com/Thanush38/WatchPredictor",
+            "image": watches
+        },
+        {
+            "name": "Resume Convertor",
+            "description": "This is a Python script that is used to convert a Resume's and cover letters in Docx format to a PDF format.",
+            "link": "",
+            "github": "https://github.com/Thanush38/ResuConvertor",
+            "image": resume
         },
         {
             "name": "PyQt6 Multi GUI application",
@@ -107,7 +123,7 @@ const Services = () => {
 
     const increment = async () => {
         await setSlideTimeout();
-        if (current >= 3) {
+        if (current >= data.projects.length) {
             setCurrent(0)
         } else {
             setCurrent(current + 1)
@@ -117,7 +133,7 @@ const Services = () => {
     const decrement = async () => {
         await setSlideTimeout();
         if (current <= 0) {
-            setCurrent(data.projects.length - 3)
+            setCurrent(data.projects.length - 1)
         } else {
         setCurrent(current - 1)
         }
