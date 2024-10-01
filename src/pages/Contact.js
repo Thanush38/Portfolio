@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./Contact.css";
-
 
 const Contact = () => {
   const {
@@ -13,12 +12,13 @@ const Contact = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const toastifySuccess = () => {
-    toast("Form sent!", {
+    toast.success("Message sent successfully! 🎉", {
       position: "bottom-right",
       autoClose: 5000,
-      hideProgressBar: true,
+      hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -26,10 +26,8 @@ const Contact = () => {
   };
 
   const onSubmit = async (data) => {
+    setIsSubmitting(true);
     try {
-      
-
-      
       await emailjs.send(
         "service_974f8ir",
         "template_mjww7zc",
@@ -40,122 +38,95 @@ const Contact = () => {
       toastifySuccess();
     } catch (e) {
       console.log(e);
+      toast.error("Oops! Something went wrong. Please try again. 😕");
     }
+    setIsSubmitting(false);
   };
+
   return (
-    <div className="Wrapper">
-      <div className="Nav">
-        <div className="navContainer">
-          <div className="return">
-            <a href="/" className="link" style={{height: '30px', textDecoration: 'none'}}>
-              <p>Return to Home</p>
-            </a>
-          </div>
+    <div className="wrapper">
+      <div className="nav">
+        <div className="nav-container">
+          <a href="/" className="return-link">
+            ← Return to Home
+          </a>
         </div>
       </div>
 
-        <div className="row">
-      <div className="ContactForm">
-          <div className="col-12 text-center">
-            <div className="contactForm">
-              <form
-                id="contact-form"
-                onSubmit={handleSubmit(onSubmit)}
-                noValidate
-              >
-                <h2 className="text-center">Contact Me</h2>
-                
-                <div className="row2  gap">
-                  <div className="col-6">
-                    <input
-                      type="text"
-                      name="name"
-                      className="label"
-                      placeholder="Name"
-                      {...register("name", {
-                        required: {
-                          value: true,
-                          message: "Please enter your name",
-                        },
-                        maxLength: {
-                          value: 30,
-                          message: "Please use 30 characters or less",
-                        },
-                      })}
-                    />
-                  </div>
-                  <div className="col-6">
-                    <input
-                      type="email"
-                      name="email"
-                      className="label"
-                      placeholder="Email address"
-                      {...register("email", {
-                        required: true,
-                        pattern:
-                          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                      })}
-                    />
-                    {errors.email && (
-                      <span className="errorMessage">
-                        Please enter a valid email address
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <div className="row formRow">
-                  <div className="col">
-                    <input
-                      type="text"
-                      name="subject"
-                      className="label"
-                      placeholder="Subject"
-                      {...register("subject", {
-                        required: {
-                          value: true,
-                          message: "Please enter a subject",
-                        },
-                        maxLength: {
-                          value: 75,
-                          message: "Subject cannot exceed 75 characters",
-                        },
-                      })}
-                    />
-                    {errors.subject && (
-                      <span className="errorMessage">
-                        {errors.subject.message}
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <div className="row formRow">
-                  <div className="col">
-                    <textarea
-                      rows={4}
-                      cols={50}
-                      name="message"
-                      className="label message"
-                      placeholder="Message"
-                      defaultValue={""}
-                      {...register("message", {
-                        required: true,
-                      })}
-                    />
-                  </div>
-                  {errors.message && (
-                    <span className="errorMessage">Please enter a message</span>
-                  )}
-                </div>
-                <button className="submit-btn" type="submit">
-                  submit here
-                </button>
-              </form>
-              <p className='pTag'>Alternatively, you can reach me at my Email <a href="#" target='_blank' arial-label='email' onClick={() => window.location = 'mailto:thanush38@outlook.com'} className='email'><u>Thanush38@outlook.com</u></a></p>
+      <div className="contact-form-container">
+        <div className="contact-form">
+          <h2>📬 Get in Touch</h2>
+          <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <div className="form-row">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name 😊"
+                  {...register("name", {
+                    required: "Name is required",
+                    maxLength: {
+                      value: 30,
+                      message: "Name should be 30 characters or less",
+                    },
+                  })}
+                />
+                {errors.name && <span className="error-message">{errors.name.message}</span>}
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email 📧"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                {errors.email && <span className="error-message">{errors.email.message}</span>}
+              </div>
             </div>
-            <ToastContainer toastStyle={{ backgroundColor: "#07bc0c", color:'#fff' }}/>
-          </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject 📝"
+                {...register("subject", {
+                  required: "Subject is required",
+                  maxLength: {
+                    value: 75,
+                    message: "Subject should be 75 characters or less",
+                  },
+                })}
+              />
+              {errors.subject && <span className="error-message">{errors.subject.message}</span>}
+            </div>
+            <div className="form-group">
+              <textarea
+                name="message"
+                placeholder="Your Message 💬"
+                {...register("message", {
+                  required: "Message is required",
+                })}
+              />
+              {errors.message && <span className="error-message">{errors.message.message}</span>}
+            </div>
+            <button className="submit-btn" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message 🚀'}
+            </button>
+          </form>
+          <p className="alternative-contact">
+            Alternatively, you can email me directly at{" "}
+            <a href="mailto:thanush38@outlook.com" className="email-link">
+              Thanush38@outlook.com
+            </a>
+          </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
