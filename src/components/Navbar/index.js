@@ -3,11 +3,13 @@ import {animateScroll as scroll} from 'react-scroll'
 import {useState, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa' 
 import {IconContext} from 'react-icons/lib'
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,NavItem,NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
 import logo from '../../images/black.png'
 import './Navbar.css'
+
 const Navbar = (props) => {
     const [scrollNav, setScrollNav] = useState(false)
+    
     const changeNav = () => {
         if(window.scrollY >= 80) {
             setScrollNav(true)
@@ -15,42 +17,51 @@ const Navbar = (props) => {
             setScrollNav(false)
         }
     }
+    
     useEffect(()=>{
         window.addEventListener('scroll', changeNav)
+        return () => {
+            window.removeEventListener('scroll', changeNav)
+        }
     },[]) 
+    
     const toggleHome = () => {
         scroll.scrollToTop();
     }
-  return (
-    <>
-        <IconContext.Provider value={{color: '#000'}}>
-        <Nav scrollNav={scrollNav}>
-            <NavbarContainer>
-                <img src={logo} to="/" onClick={toggleHome} className="logo"></img>
-
-                <MobileIcon onClick={props.toggle} >
-                <FaBars  />
-                </MobileIcon>
-                <NavMenu>
-                    <NavItem>
-                        <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to="skills" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Skills</NavLinks>
-                    </NavItem>
-                    <NavItem> 
-                        <NavLinks to="projects" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Projects</NavLinks>
-                    </NavItem>
-                </NavMenu>    
-                  <NavBtn>
-                      <NavBtnLink to="/Contact">Contact</NavBtnLink>
-                  </NavBtn>
-
-            </NavbarContainer>
-        </Nav>
-        </IconContext.Provider>
-    </>
-  )
+    
+    return (
+        <>
+            <IconContext.Provider value={{color: '#000'}}>
+                <Nav scrollNav={scrollNav}>
+                    <NavbarContainer>
+                        <img src={logo} onClick={toggleHome} className="logo" alt="Logo" />
+                        <MobileIcon onClick={props.toggle}>
+                            <FaBars />
+                        </MobileIcon>
+                        <NavMenu>
+                            {['about', 'skills', 'projects'].map((item) => (
+                                <NavItem key={item}>
+                                    <NavLinks 
+                                        to={item} 
+                                        smooth={true} 
+                                        duration={500} 
+                                        spy={true} 
+                                        exact='true' 
+                                        offset={-80}
+                                    >
+                                        {item.charAt(0).toUpperCase() + item.slice(1)}
+                                    </NavLinks>
+                                </NavItem>
+                            ))}
+                        </NavMenu>    
+                        <NavBtn>
+                            <NavBtnLink to="/Contact">Contact</NavBtnLink>
+                        </NavBtn>
+                    </NavbarContainer>
+                </Nav>
+            </IconContext.Provider>
+        </>
+    )
 }
 
 export default Navbar

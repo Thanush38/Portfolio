@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#5A84A4' : 'transparent')}; /* navbar will be black if scrollNav is true, otherwise it will be transparent 5A84A4*/
+    background: ${({ scrollNav }) => (scrollNav ? '#5A84A4' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -13,6 +13,7 @@ export const Nav = styled.nav`
     position: sticky; 
     top: 0;
     z-index: 10; 
+    transition: 0.4s all ease;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease; 
@@ -27,7 +28,7 @@ export const NavbarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
-    `
+`
 
 export const NavLogo = styled(LinkR)`
     color: #000;
@@ -39,8 +40,6 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    ${'' /* background-image: (url('../../images/logo.png')); */}
-    
 `
 
 export const MobileIcon = styled.div`
@@ -55,6 +54,11 @@ export const MobileIcon = styled.div`
         font-size: 1.8rem; 
         cursor: pointer; 
         color: #000;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translate(-100%, 60%) scale(1.1);
+        }
     }
 `
 
@@ -82,14 +86,16 @@ export const NavLinks = styled(LinkS)`
     padding: 0 1rem; 
     height: 100%; 
     cursor: pointer; 
-    transition: all .2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &.active {
         border-bottom: 3px solid #8AC9EB;
+        color: #8AC9EB;
     }
 
     &:hover {
-        font-size: 1.3rem;
+        color: #8AC9EB;
+        transform: translateY(-2px);
     }
 `
 
@@ -112,13 +118,13 @@ export const NavBtnLink = styled(LinkR)`
     outline: none; 
     border: none; 
     cursor: pointer;
-    transition: all 0.2s ease-in-out; 
+    transition: all 0.3s ease-in-out; 
     text-decoration: none;
-    transition: all 0.2s ease-in-out; 
 
     &:hover {
-        
         background: #000;
         color: #fff; 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 `
