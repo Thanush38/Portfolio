@@ -95,6 +95,37 @@ const Services = () => {
     const [rightLock, setRightLock] = useState(false);
     const [fade, setFade] = useState(false);
     const totalItems = data.projects.length;
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    const [cardCount, setCardCount] = useState(3);
+
+    function getCurrentDimension(){
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight,
+        }
+    }
+    function getCardCount(){
+        if(screenSize.width <= 768) {
+            setCardCount(1)
+        } else if(screenSize.width <= 1050) {
+            setCardCount(2)
+        } else {
+            setCardCount(3)
+    }
+    }
+
+    useEffect(() => {
+        const updateDimension = () => {
+            setScreenSize(getCurrentDimension())
+
+        }
+        window.addEventListener('resize', updateDimension);
+        getCardCount()
+
+        return(() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+    }, [screenSize])
 
     // Update to trigger fade transition
     const setSlideTimeout = () => {
@@ -103,16 +134,16 @@ const Services = () => {
             const timeout = setTimeout(() => {
                 setSlide(true); // After 500ms, set slide-in
                 resolve();      // Resolve after animation completes
-            }, 1000);
+            }, 500);
             return () => clearTimeout(timeout);
         });
     };
     const setStatus = () => {
         console.log(current)
-        if(current === 0) {
+        if(current === 1) {
             setLeftLock(true);
             setRightLock(false);
-        } else if(current === data.projects.length - 3) {
+        } else if(current === data.projects.length -cardCount -1) {
             setRightLock(true);
             setLeftLock(false);
         } else {
@@ -141,19 +172,9 @@ const Services = () => {
     }
     const getClassName = (index) => {
         const adjustedIndex = index % totalItems;
-
-        // Determine if the index is within the range of current and the next two
-        // if (
-        //     (adjustedIndex >= current && adjustedIndex < current + 3) ||
-        //     (current + 3 > totalItems && adjustedIndex < (current + 3) % totalItems)
-        // ) {
-        //     return "animateCardMove" + (slide ? " slide-in" : " slide-out");
-        // } else {
-        //     return "animateCardMove hideCard" + (slide ? " slide-in" : " slide-out");
-        // }
         if (
-            (adjustedIndex >= current && adjustedIndex < current + 3) ||
-            (current + 3 > totalItems && adjustedIndex < (current + 3) % totalItems)
+            (adjustedIndex >= current && adjustedIndex < current + cardCount) ||
+            (current + cardCount > totalItems && adjustedIndex < (current + cardCount) % totalItems)
         ) {
             return "animateCardFade" + (slide ? " fade-in" : " fade-out");
         } else {
@@ -169,14 +190,14 @@ const Services = () => {
             </div>
             <div className={"ProjectSlider"}>
 
-                <div className={`arrow ${leftLock ? 'disabled' : ''}`} onClick={decrement}>
+                <div className={`arrow arrowLeft ${leftLock ? 'disabled' : ''}`} onClick={decrement}>
                     <div className="arrow-top arrow-top-left"></div>
                     <div className="arrow-bottom arrow-bottom-left"></div>
                 </div>
 
                 <div className={`ServicesWrapper`}>
                     {data.projects.map((project, index) => {
-                            console.log(project.name)
+
                             return (
                                 <div className={`${getClassName(index)}`}>
                                     <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000}>

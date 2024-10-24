@@ -62,6 +62,11 @@ export const Column2 = styled.div`
     margin-left: 50px;
     padding: 0 15px;
     grid-area: col2;
+    
+    //@media screen and (max-width: 768px){
+    //    margin-bottom: 20px;
+    //    margin-left: 0;
+    //}
 
 `;
 
@@ -110,17 +115,17 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
+    width: 100%;
     display: flex;
     justify-content: center;
-    max-width: 555px;
     height: 100%;
 
 `;
 
 export const Img = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
+    //margin: 0 0 10px 0;
+    //padding-right: 0;
 
 `;
 
