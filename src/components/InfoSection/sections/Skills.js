@@ -79,6 +79,7 @@ const Skills = () => {
             icons: [
                 { src: "https://img.icons8.com/color/96/mongodb.png", alt: "mongodb" },
                 { src: "https://img.icons8.com/color/96/mysql-logo.png", alt: "mysql" },
+                { src: "https://img.icons8.com/color/96/postgreesql.png", alt: "postgresql" },
             ]
         },
         {

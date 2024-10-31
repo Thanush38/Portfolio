@@ -36,7 +36,7 @@ const AltSkills = () => {
                 </Column1>
                 <Column2>
                     <ImgWrap>
-                        <img src={skillImage} alt="Skills" className='imgTag'/>
+                        <img src={skillImage} alt="Skills" className='skillImgTag'/>
                     </ImgWrap>
                 </Column2>
 

@@ -84,6 +84,13 @@
     display: block;
 }
 
+.skillImgTag{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 30px;
+}
+
 @media screen and (max-width: 768px) {
     .background {
         padding: 2rem 0;

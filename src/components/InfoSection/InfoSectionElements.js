@@ -15,6 +15,7 @@ export const InfoContainer2 = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
     display: none;
+    padding-top: 40px;
     
 
     @media screen and (max-width: 1300px){
@@ -32,6 +33,10 @@ export const InfoWrapper = styled.div`
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
+
+    @media screen and (max-width: 768px){
+        height: 100%;
+    }
 `;
 
 export const InfoRow = styled.div`
@@ -51,22 +56,20 @@ export const Column1 = styled.div`
     margin-right: 50px;
     padding: 0 15px;
     grid-area: col1;
+    //width: 88%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 `;
 
 export const Column2 = styled.div`  
-    margin-bottom: 15px;
-    margin-left: 50px;
+    
     padding: 0 15px;
     grid-area: col2;
     
-    //@media screen and (max-width: 768px){
-    //    margin-bottom: 20px;
-    //    margin-left: 0;
-    //}
+   
 
 `;
 
