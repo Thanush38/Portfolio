@@ -1,7 +1,18 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaGithub} from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import {FooterContainer, FooterLink, FooterLinkItems, FooterLinkTitle, FooterLinkWrapper, FooterLinksContainer, FooterWrap, SocialIconLink, SocialIcons, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights } from './FooterElements'
+import {
+  FooterContainer,
+  FooterWrap,
+  SocialIconLink,
+  SocialIcons,
+  SocialLogo,
+  SocialMedia,
+  SocialMediaWrap,
+  WebsiteRights,
+  FooterContent,
+  FooterText
+} from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -12,24 +23,30 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
+        <FooterContent>
+          <SocialLogo to='/' onClick={toggleHome}>
+            Thanush Dinesh
+          </SocialLogo>
+          <FooterText>
+            Passionate about creating innovative solutions and pushing the boundaries of technology.
+          </FooterText>
+        </FooterContent>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/' onClick={toggleHome}>
-              Thanush Dinesh
-            </SocialLogo>
             <SocialIcons>
-              <SocialIconLink href="https://github.com/Thanush38" target='_blank' arial-label="Github">
+              <SocialIconLink href="https://github.com/Thanush38" target='_blank' aria-label="Github">
                 <FaGithub />
               </SocialIconLink>
-              <SocialIconLink href='https://www.linkedin.com/in/thanush-dinesh-848319290/' target='_blank' arial-label='Linkedin'>
+              <SocialIconLink href='https://www.linkedin.com/in/thanush-dinesh-848319290/' target='_blank' aria-label='Linkedin'>
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="#" target='_blank' arial-label='email' onClick={() => window.location = 'mailto:thanush38@outlook.com'}>
+              <SocialIconLink href="#" aria-label='email' onClick={(e) => {e.preventDefault(); window.location.href = 'mailto:thanush38@outlook.com';}}>
                 <AiOutlineMail />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>
+        <WebsiteRights>Thanush Dinesh © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
       </FooterWrap>
     </FooterContainer>
   )

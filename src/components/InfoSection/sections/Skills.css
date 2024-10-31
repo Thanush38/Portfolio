@@ -1,6 +1,3 @@
-
-
-
 @tailwind utilities;
 
 .container {
@@ -11,54 +8,30 @@
     justify-content: start;
     align-items: center;
     padding-top: 10px;
-   
-
-    @media screen and (max-width: 1300) {
-        display: none;
-        
-    }
-
-    @media screen and (max-height: 640px) {
-        height: 700px;
-        
-    }
-
 }
 
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 95vw;
+    }
+}
 
+@media screen and (max-height: 640px) {
+    .container {
+        height: 700px;
+    }
+}
 
-h1{
-    font-size: 2.0rem;
+h1 {
+    font-size: 1.8rem;
     color: #5A84A4;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: 1.1;
+    margin-bottom: 10px;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    /*height: 100%;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    @media screen and (max-height: 800px) {
-        font-size: 1.5rem;   
-        
-        
-    }
-
 }
 
 .img-container {
@@ -66,118 +39,42 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     width: 100%;
     height: 20vh;
     overflow: hidden;
 }
 
-.small-font{
-
-    @media screen and (max-height: 840px) {
-        font-size: .82rem;   
-        
-        
-    }
+.small-font {
+    font-size: 1.5rem;
 }
 
-.img{
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-
-    &:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-out;  
-    }
-
-    @media screen and (max-height: 670px) {
-        width: 50px;
-        height: 50px;
-        
-    }
-
-  
-
-
+.img, .img-small {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease-out;
 }
 
-
-
-.img-small{
-    width: 80px;
-    height: 70px;
-    object-fit: cover;
-
-    &:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-out;  
-    }
-
-    @media screen and (max-height: 670px) {
-        width: 60px;
-        height: 60px;
-        
-    }
-
-
+.img:hover, .img-small:hover {
+    transform: scale(1.1);
 }
 
-.web {
+.web, .dev, .framework {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 195px;
-    width: 100%;
-    
-
-    @media screen and (max-height: 760px) {
-        height: 140px;
-    }
+    height: 100%;
 }
 
-.framework {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 195px;
-    width: 100%;
-    
-
-    @media screen and (max-height: 760px) {
-        height: 160px;
-    }
-}
-
-.vertical{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 160px;
-    width: 80px;
-}
-
-.vertical-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.box-c{
+.box-c {
     width: 150vh;
+}
 
-    @media screen and (max-height: 640px) {
+@media screen and (max-height: 640px) {
+    .box-c {
         grid-auto-rows: 200px;
-        
-        
     }
-
 }
 
 .center-box-container {
@@ -188,69 +85,48 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.dev {
+
+.para {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.skills {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gitLink {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #5A84A4;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.gitLink:hover {
+    background-color: #3a5a7a;
+    transform: translateY(-2px);
+}
+
+.btnWrap {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    width: 100%;
-
-    @media screen and (max-height: 820px) {
-        height: 180px;
-    }
-
-    @media screen and (max-height: 760px) {
-        height: 140px;
-    }
-
-
-    
-
-  
 }
 
-.skills{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.skill-box {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hide{
-    display: none;
-
-    
-}
-
-.para{
-
-    @media screen and (max-height: 840px) {
-        font-size: .82rem;   
-        
-        
-    }
-}
-
-.gitLink{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    @media screen and (max-height: 840px) {
-        font-size: 1rem;   
-        
-        
-    }
-
-   
-
-}
-.btnWrap{
-    display: flex;
-    justify-content: flex-start;
-
-    
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
